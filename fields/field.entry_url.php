@@ -97,7 +97,7 @@
 		Publish:
 	-------------------------------------------------------------------------*/
 		
-		public function displayPublishPanel(&$wrapper, $data = null, $flagWithError = null, $prefix = null, $postfix = null) {
+		public function displayPublishPanel(XMLElement &$wrapper, $data = NULL, $flagWithError = NULL, $fieldnamePrefix = NULL, $fieldnamePostfix = NULL, $entry_id = NULL) {
 			$label = Widget::Label($this->get('label'));
 			$span = new XMLElement('span', null, array('class' => 'frame'));
 			
