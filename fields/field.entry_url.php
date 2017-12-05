@@ -36,7 +36,7 @@
 		Settings:
 	-------------------------------------------------------------------------*/
 		
-		public function displaySettingsPanel(&$wrapper, $errors = null) {
+		public function displaySettingsPanel(XMLElement &$wrapper, $errors = NULL) {
 			parent::displaySettingsPanel($wrapper, $errors);
 			
 			$order = $this->get('sortorder');
