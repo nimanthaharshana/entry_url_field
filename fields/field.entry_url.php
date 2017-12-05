@@ -152,7 +152,7 @@
 			$wrapper->appendChild($element);
 		}
 		
-		public function prepareTableValue($data, XMLElement $link = null) {
+		public function prepareTableValue($data, XMLElement $link = NULL, $entry_id = NULL) {
 			if (empty($data)) return;
 			
 			$anchor =  Widget::Anchor($data['label'], $this->formatURL($data['value']));
