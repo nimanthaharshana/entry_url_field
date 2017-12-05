@@ -143,7 +143,7 @@
 		Output:
 	-------------------------------------------------------------------------*/
 		
-		public function appendFormattedElement(&$wrapper, $data, $encode = false) {
+		public function appendFormattedElement(XMLElement &$wrapper, $data, $encode = false, $mode = NULL, $entry_id = NULL) {
 			if (!self::$ready) return;
 			
 			$element = new XMLElement($this->get('element_name'));
