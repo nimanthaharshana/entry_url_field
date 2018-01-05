@@ -36,7 +36,7 @@
 		Settings:
 	-------------------------------------------------------------------------*/
 		
-		public function displaySettingsPanel(XMLElement &$wrapper, $errors = NULL) {
+		public function displaySettingsPanel(XMLElement &$wrapper, $errors = null) {
 			parent::displaySettingsPanel($wrapper, $errors);
 			
 			$order = $this->get('sortorder');
@@ -97,7 +97,7 @@
 		Publish:
 	-------------------------------------------------------------------------*/
 		
-		public function displayPublishPanel(XMLElement &$wrapper, $data = NULL, $flagWithError = NULL, $fieldnamePrefix = NULL, $fieldnamePostfix = NULL, $entry_id = NULL) {
+		public function displayPublishPanel(XMLElement &$wrapper, $data = null, $flagWithError = null, $fieldnamePrefix = null, $fieldnamePostfix = null, $entry_id = null) {
 			$label = Widget::Label($this->get('label'));
 			$span = new XMLElement('span', null, array('class' => 'frame'));
 			
@@ -133,7 +133,7 @@
 			return self::__OK__;
 		}
 		
-		public function processRawFieldData($data, &$status, &$message = NULL, $simulate = false, $entry_id = NULL) {
+		public function processRawFieldData($data, &$status, &$message = null, $simulate = false, $entry_id = null) {
 			$status = self::__OK__;
 			
 			return array('label' => null, 'value' => null);
@@ -143,7 +143,7 @@
 		Output:
 	-------------------------------------------------------------------------*/
 		
-		public function appendFormattedElement(XMLElement &$wrapper, $data, $encode = false, $mode = NULL, $entry_id = NULL) {
+		public function appendFormattedElement(XMLElement &$wrapper, $data, $encode = false, $mode = null, $entry_id = null) {
 			if (!self::$ready) return;
 			
 			$element = new XMLElement($this->get('element_name'));
@@ -152,7 +152,7 @@
 			$wrapper->appendChild($element);
 		}
 		
-		public function prepareTableValue($data, XMLElement $link = NULL, $entry_id = NULL) {
+		public function prepareTableValue($data, XMLElement $link = null, $entry_id = null) {
 			if (empty($data)) return;
 			
 			$anchor =  Widget::Anchor($data['label'], $this->formatURL($data['value']));
